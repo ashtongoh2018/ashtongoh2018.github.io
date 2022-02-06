@@ -43,7 +43,8 @@
     
     <p>
       <h5>
-        Step 1: Mint 100m tokens to your account first
+        Step 1: Mint 100m tokens to your account first <br>
+        This is so simulate the injection of funds into the vesting mechanism
       </h5>
       <button type="button" class="btn btn-light" onclick="mintCoin()">Mint Coins</button>
     </p>
@@ -53,7 +54,7 @@
       <h5>
         Step 2: Start vesting by inserting Split Payment Wallet address <br>
 
-        Just use the preset address that I've preset for you
+        I have already keyed in the wallet address for you
       </h5>
       Contract Address: <input type="text" id="splitAddr" value="0x704ecbbb19756B5fE925f4b120d1874e0e0F42C3">
       <button type="button" class="btn btn-light" onclick="startVesting()">Start Vesting</button>
@@ -110,7 +111,13 @@
       <button type="button" class="btn btn-light" onclick="totalReleased()">Total Released</button>
       <div id="totalReleased"></div>
     </p>
-  
+    <br>
+
+    <p>
+      <h5> 
+        Step 8: If you wish to release more funds from the Vesting Wallet to the Split Payment Wallet, please repeat from Step 4 again.<br>
+      </h5>
+    </p>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

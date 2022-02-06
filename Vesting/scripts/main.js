@@ -1,6 +1,5 @@
 document.body.style.overflow = 'auto';
 
-
 const serverUrl = "https://lxg5eoptji2t.usemoralis.com:2053/server";
 const appId = "Gp3FItgV3JydIBCX5Gp9xUt5AoyNWUMKerjYdRaq";
 Moralis.start({ serverUrl, appId });
