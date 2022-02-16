@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Ashton Web3</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-10">
+            <div class="typewriter">
+                <h1>Welcome to Pepe LP Farm</h1>
+            </div>
+            <div class="typewriter">
+                <h2>Click below to start farming! :)</h2>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-10">
+                <div class="card-deck">
+                    <div class="card text-white bg-dark mb-3 text-center" style="max-width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Mint Pepe Token 1</h5>
+                          <input type="text" class="form-control" id="mintInput1" placeholder="Amount to mint"><br>
+                          <button type="button" class="btn btn-light" onclick="mint1()">Mint</button>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3 text-center" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mint Pepe Token 2</h5>
+                            <input type="text" class="form-control" id="mintInput2" placeholder="Amount to mint"><br>
+                            <button type="button" class="btn btn-light" onclick="mint2()">Mint</button>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3 text-center" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mint Pepe Token 3</h5>
+                            <input type="text" class="form-control" id="mintInput3" placeholder="Amount to mint"><br>
+                            <button type="button" class="btn btn-light" onclick="mint3()">Mint</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-10">
+                <div class="card-deck">
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                        <img class="card-img-top" src="/farming/images/pepe4.png">
+                        <div class="card-header">Pepe LP Farm 1</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Pool rewards per block: 50 Ash Tokens / every 10 Pepe Token 1</h5><br>
+                          <p class="card-text">Key in the amount you wish to stake, approve the transaction, then press Stake</p>
+                          <input type="text" class="form-control" id="stakeInput1" placeholder="Amount to approve/stake"><br>
+                          <button type="button" class="btn btn-success" onclick="approve1()">Approve</button>
+                          <button type="button" class="btn btn-light" onclick="stake(0)">Stake</button>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                        <img class="card-img-top" src="/farming/images/pepe1.jpg">
+                        <div class="card-header">Pepe LP Farm 2</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Pool rewards per block: 30 Ash Tokens / every 10 Pepe Token 2</h5><br>
+                          <p class="card-text">Key in the amount you wish to stake, approve the transaction, then press Stake</p>
+                          <input type="text" class="form-control" id="stakeInput2" placeholder="Amount to approve/stake"><br>
+                          <button type="button" class="btn btn-success" onclick="approve2()">Approve</button>
+                          <button type="button" class="btn btn-light" onclick="stake(1)">Stake</button>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                        <img class="card-img-top" src="/farming/images/pepe3.png">
+                        <div class="card-header">Pepe LP Farm 3</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Pool rewards per block: 20 Ash Tokens / every 10 Pepe Token 3</h5><br>
+                          <p class="card-text">Key in the amount you wish to stake, approve the transaction, then press Stake</p>
+                          <input type="text" class="form-control" id="stakeInput3" placeholder="Amount to approve/stake"><br>
+                          <button type="button" class="btn btn-success" onclick="approve3()">Approve</button>
+                          <button type="button" class="btn btn-light" onclick="stake(2)">Stake</button>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-10">
+                <div class="card-deck">
+                    <div class="card text-white bg-dark mb-3 text-center" style="max-width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Check functions:</h5>
+                          <p class="card-text">All this can be done interchangeably. They don't have to be done in sequence.</p><br>
+                        
+                          Value: <div id="output1"></div><br>
+
+                          <button type="button" class="btn btn-light" onclick="checkStaked(0)">Check Staked</button><br><br>
+                          <button type="button" class="btn btn-light" onclick="checkRB(0)">Check Reward Bal</button><br><br>
+                          <button type="button" class="btn btn-light" onclick="checkRR(0)">Check Rolling Rewards</button><br><br>
+                          <button type="button" class="btn btn-light" onclick="claimReward(0)">Claim Rewards</button><br><br>
+
+                          ---------------------------- 
+
+                          <input type="text" class="form-control" id="unstakeInput1" placeholder="Amount to unstake"><br>
+                          <button type="button" class="btn btn-danger" onclick="unstake(0)">Unstake</button>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3 text-center" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Check functions:</h5>
+                            <p class="card-text">All this can be done interchangeably. They don't have to be done in sequence.</p><br>
+                          
+                            Value: <div id="output2"></div><br>
+                            
+                            <button type="button" class="btn btn-light" onclick="checkStaked(1)">Check Staked</button><br><br>
+                            <button type="button" class="btn btn-light" onclick="checkRB(1)">Check Reward Bal</button><br><br>
+                            <button type="button" class="btn btn-light" onclick="checkRR(1)">Check Rolling Rewards</button><br><br>
+                            <button type="button" class="btn btn-light" onclick="claimReward(1)">Claim Rewards</button><br><br>
+  
+                            ---------------------------- 
+  
+                            <input type="text" class="form-control" id="unstakeInput2" placeholder="Amount to unstake"><br>
+                            <button type="button" class="btn btn-danger" onclick="unstake(1)">Unstake</button>
+                          </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3 text-center" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Check functions:</h5>
+                            <p class="card-text">All this can be done interchangeably. They don't have to be done in sequence.</p><br>
+                          
+                            Value: <div id="output3"></div><br>
+                            
+                            <button type="button" class="btn btn-light" onclick="checkStaked(2)">Check Staked</button><br><br>
+                            <button type="button" class="btn btn-light" onclick="checkRB(2)">Check Reward Bal</button><br><br>
+                            <button type="button" class="btn btn-light" onclick="checkRR(2)">Check Rolling Rewards</button><br><br>
+                            <button type="button" class="btn btn-light" onclick="claimReward(2)">Claim Rewards</button><br><br>
+  
+                            ---------------------------- 
+  
+                            <input type="text" class="form-control" id="unstakeInput3" placeholder="Amount to unstake"><br>
+                            <button type="button" class="btn btn-danger" onclick="unstake(2)">Unstake</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  </body>
+</html>
