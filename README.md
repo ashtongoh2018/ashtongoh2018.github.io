@@ -1,4 +1,4 @@
-# ashtongoh2018.github.io
+# hahaashton1.github.io
 
 Alike to the solidity repository, the code done here doesn't encapsulate my full experience or knowledge. They are mainly test codes for technical interviews.
 
