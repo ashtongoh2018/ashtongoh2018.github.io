@@ -7,10 +7,10 @@ Here, I test for the integration of Web3 and smart contract integration here. :g
 Though not perfect by any means, I'm always learning to code better! :neckbeard:
 
 Mint NFT/Coin:
-https://ashtongoh2018.github.io/index.html
+https://hahaashton1.github.io/index.html
 
 Staking/Farming:
-https://ashtongoh2018.github.io/farming/index.html
+https://hahaashton1.github.io/farming/index.html
 
 Vesting:
-https://ashtongoh2018.github.io/Vesting/vesting.html
+https://hahaashton1.github.io/Vesting/vesting.html
